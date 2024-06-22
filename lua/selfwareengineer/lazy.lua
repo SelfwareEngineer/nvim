@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ import = "selfwareengineer.plugins" },
 	{ import = "selfwareengineer.plugins.lsp" },
+	{ import = "selfwareengineer.plugins.copilot" },
 }, {
 	checker = {
 		enabled = true,
