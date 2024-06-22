@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
 	{ import = "selfwareengineer.plugins" },
 	{ import = "selfwareengineer.plugins.lsp" },
 }, {
