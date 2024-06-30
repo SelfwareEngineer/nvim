@@ -51,3 +51,6 @@ keymap.set("n", "N", "Nzzzv", { desc = "Move to previous search result" })
 keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
 keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yank (normal)" })
 keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank ()" })
+
+-- wtf does this do actually
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
