@@ -37,3 +37,6 @@ keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
 -- Highlight dragging in visual mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
+
+-- Line append without moving cursor
+keymap.set("n", "J", "mzJ`z", { desc = "Append line below without moving cursor" })
