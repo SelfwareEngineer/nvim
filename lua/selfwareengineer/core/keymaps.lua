@@ -33,4 +33,4 @@ keymap.set("n", "<leader>Y", '"+Y')
 -- Misc
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "zv", vim.cmd.Ex, { desc = "Return to Explorer" })
-keymap.set("x", "<leader>p", "\"_dp", { desc = "Paste without yank"})
+keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
