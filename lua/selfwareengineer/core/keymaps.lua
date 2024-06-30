@@ -4,9 +4,8 @@ local keymap = vim.keymap -- for conciseness
 
 -- syntax: keymap.set("mode initial", "new key/combo", "default key", { desc = "<description>"})
 
--- Return to Normal Mode
-keymap.set("i", "zm", "<ESC>", { desc = "exit insert mode with 'zm'" })
-keymap.set("v", "zm", "<ESC>", { desc = "exit visual mode with 'zm'" })
+-- Primagen's sacriligous ESC remap that I happen to completely agree with
+keymap.set("i", "<C-c>", "<ESC>", { desc = "Exit insert mode with ctrl+c" })
 
 -- Increment and decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment num" })
