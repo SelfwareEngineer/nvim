@@ -46,3 +46,8 @@ keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move half page down" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move half page up" })
 keymap.set("n", "n", "nzzzv", { desc = "Move to next search result" })
 keymap.set("n", "N", "Nzzzv", { desc = "Move to previous search result" })
+
+-- Options to avoid losing buffer
+keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
+keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yank (normal)" })
+keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank ()" })
