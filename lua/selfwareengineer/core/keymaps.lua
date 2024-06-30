@@ -34,3 +34,7 @@ keymap.set("n", "<leader>Y", '"+Y')
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "zv", vim.cmd.Ex, { desc = "Return to Explorer" })
 keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
+
+-- Highlight dragging in visual mode
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
