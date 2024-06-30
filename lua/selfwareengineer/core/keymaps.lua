@@ -40,3 +40,9 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
 -- Line append without moving cursor
 keymap.set("n", "J", "mzJ`z", { desc = "Append line below without moving cursor" })
+
+-- Keep cursor in the middle with various movements
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move half page down" })
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move half page up" })
+keymap.set("n", "n", "nzzzv", { desc = "Move to next search result" })
+keymap.set("n", "N", "Nzzzv", { desc = "Move to previous search result" })
