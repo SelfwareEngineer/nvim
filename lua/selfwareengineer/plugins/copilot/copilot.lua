@@ -21,12 +21,12 @@ return {
 				},
 			},
 			suggestion = {
-				enabled = true,
+				enabled = false,
 				auto_trigger = true,
 				hide_during_completion = true,
 				debounce = 75,
 				keymap = {
-					toggle_auto_trigger = "<M-d>", -- d for "dismiss," since this is effectively redundant with copilot.suggestion.dismiss()
+					toggle_auto_trigger = "<M-d>", -- BROKEN -- d for "dismiss," since this is effectively redundant with copilot.suggestion.dismiss()
 					accept = "<M-a>",
 					accept_word = "<M-w>",
 					accept_line = "<M-m>",
