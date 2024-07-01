@@ -63,6 +63,6 @@ return {
 		-- Open harpoon window with Telescope
 		keymap.set("n", "<leader>fh", function()
 			toggle_telescope(harpoon:list())
-		end, { desc = "Open harpoon window" })
+		end, { desc = "Open harpoon window with Telescope" })
 	end,
 }
