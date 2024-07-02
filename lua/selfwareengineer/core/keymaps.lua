@@ -24,7 +24,7 @@ keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "" })
 
--- Yank to system clipboard - BROKEN
+-- Yank to system clipboard
 keymap.set("n", "<leader>y", '"+y')
 keymap.set("v", "<leader>y", '"+y')
 keymap.set("n", "<leader>Y", '"+Y')
