@@ -15,6 +15,7 @@ require("lazy").setup({
 	{ import = "selfwareengineer.plugins" },
 	{ import = "selfwareengineer.plugins.lsp" },
 	{ import = "selfwareengineer.plugins.copilot" },
+	{ import = "selfwareengineer.plugins.debuggers" },
 }, {
 	checker = {
 		enabled = true,
