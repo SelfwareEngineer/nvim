@@ -1,3 +1,5 @@
+--  WARNING: MOST OF THIS DOES NOT WORK. The python debugger works fine, which is why I'm keeping all of this for now, but JavaScript continues to be a royal bitch to get working. I've now spent almost a full day trying to figure this outand have ultimately decided to just use VSCode as my debugger for now.
+
 return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
