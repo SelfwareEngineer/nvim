@@ -47,10 +47,22 @@ keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move half page up" })
 keymap.set("n", "n", "nzzzv", { desc = "Move to next search result" })
 keymap.set("n", "N", "Nzzzv", { desc = "Move to previous search result" })
 
+-- Add blank line w/o entering insert mode
+keymap.set("n", "<leader>o", "o<ESC>", { desc = "Add blank line below (no insert mode)" })
+keymap.set("n", "<leader>O", "O<ESC>", { desc = "Add blank line above (no insert mode)" })
+
 -- Options to avoid losing buffer
 keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
 keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yank (normal)" })
 keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank (visual)" })
 
 -- wtf does this do actually
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
+keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
+
+-- Set up boilerplate HTML
+keymap.set(
+	"n",
+	"<leader>!",
+	'i<!doctype html><CR><html lang="en"><CR><Tab><head><CR><Tab><Tab><meta charset="UTF-8" /><CR><Tab><Tab><meta name="viewport" content="width=device-width, initial-scale=2.0" /><CR><Tab><Tab><link rel="stylesheet" href="style.css" /><CR><Tab><Tab><script src="script.js"></script><CR><Tab><Tab><title>Document</title><CR><Tab></head><CR><Tab><body></body><CR></html><ESC>',
+	{ desc = "set up boilerplate HTML" }
+)
