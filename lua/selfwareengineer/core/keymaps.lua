@@ -8,8 +8,8 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("i", "<C-c>", "<ESC>", { desc = "Exit insert mode with ctrl+c" })
 
 -- Increment and decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment num" })
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement num" })
+keymap.set("n", "<leader>.", "<C-a>", { desc = "Increment num" })
+keymap.set("n", "<leader>,", "<C-x>", { desc = "Decrement num" })
 
 -- Window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
