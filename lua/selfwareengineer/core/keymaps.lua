@@ -63,6 +63,6 @@ keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc =
 keymap.set(
 	"n",
 	"<leader>!",
-	'i<!doctype html><CR><html lang="en"><CR><Tab><head><CR><Tab><Tab><meta charset="UTF-8" /><CR><Tab><Tab><meta name="viewport" content="width=device-width, initial-scale=2.0" /><CR><Tab><Tab><link rel="stylesheet" href="style.css" /><CR><Tab><Tab><script src="script.js"></script><CR><Tab><Tab><title>Document</title><CR><Tab></head><CR><Tab><body></body><CR></html><ESC>',
+	'i<!doctype html><CR><html lang="en"><CR><Tab><head><CR><Tab><Tab><meta charset="UTF-8" /><CR><Tab><Tab><meta name="viewport" content="width=device-width, initial-scale=2.0" /><CR><Tab><Tab><link rel="stylesheet" href="style.css" /><CR><Tab><Tab><script src="script.js" defer></script><CR><Tab><Tab><title>Document</title><CR><Tab></head><CR><Tab><body></body><CR></html><ESC>',
 	{ desc = "set up boilerplate HTML" }
 )
