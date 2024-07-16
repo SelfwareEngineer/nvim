@@ -66,3 +66,11 @@ keymap.set(
 	'i<!doctype html><CR><html lang="en"><CR><Tab><head><CR><Tab><Tab><meta charset="UTF-8" /><CR><Tab><Tab><meta name="viewport" content="width=device-width, initial-scale=2.0" /><CR><Tab><Tab><link rel="stylesheet" href="style.css" /><CR><Tab><Tab><script src="script.js" defer></script><CR><Tab><Tab><title>Document</title><CR><Tab></head><CR><Tab><body></body><CR></html><ESC>',
 	{ desc = "set up boilerplate HTML" }
 )
+
+-- Add the extremely annoying text for "required" *s in HTML forms
+keymap.set(
+	"n",
+	"<leader>hr",
+	'a<span aria-label="required">*</span><ESC>',
+	{ desc = 'Add span for "required" asterisk (HTML forms)' }
+)
