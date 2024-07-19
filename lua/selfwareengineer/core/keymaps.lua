@@ -55,6 +55,8 @@ keymap.set("n", "<leader>O", "O<ESC>", { desc = "Add blank line above (no insert
 keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
 keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yank (normal)" })
 keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank (visual)" })
+keymap.set("n", "<leader>c", '"_c', { desc = "Change without yank (normal)" })
+keymap.set("v", "<leader>c", '"_c', { desc = "Change without yank (visual)" })
 
 -- wtf does this do actually
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
