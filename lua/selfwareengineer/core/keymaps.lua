@@ -58,7 +58,7 @@ keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank (visual)" })
 keymap.set("n", "<leader>c", '"_c', { desc = "Change without yank (normal)" })
 keymap.set("v", "<leader>c", '"_c', { desc = "Change without yank (visual)" })
 
--- wtf does this do actually
+-- I don't actually remember what a tmux sessionizer is but this sure does start a new one huh
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
 
 -- Set up boilerplate HTML
