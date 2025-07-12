@@ -4,6 +4,12 @@ local keymap = vim.keymap -- for conciseness
 
 -- syntax: keymap.set("mode initial", "new key/combo", "default key", { desc = "<description>"})
 
+-- Shortcut to open LazyVim
+keymap.set({ "n", "v" }, "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy menu" })
+
+-- Shortcut to open Mason
+keymap.set({ "n", "v" }, "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason menu" })
+
 -- Primagen's sacriligous ESC remap that I happen to completely agree with
 keymap.set("i", "<C-c>", "<ESC>", { desc = "Exit insert mode with ctrl+c" })
 
