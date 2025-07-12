@@ -35,5 +35,7 @@ return {
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Find string under cursor in cwd" })
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "find todos" })
+		keymap.set({ "n", "v" }, "<leader>fn", "<cmd>Telescope noice<CR>", { desc = "Show Noice notification history" })
+		keymap.set({ "n", "v" }, "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Fuzzy find keymaps" })
 	end,
 }
