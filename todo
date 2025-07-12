@@ -1,1 +1,1 @@
-- trouble.lua appears not to be working for some reason (<leader>xx returns error)
+- Figure out how Prime's tmux sessionizer works (both in and out of nvim) (keymaps.lua:61)
