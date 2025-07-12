@@ -12,6 +12,12 @@ return {
 		},
 		{ "<leader>xq", "<cmd>Trouble qflist toggle<CR>", desc = "Quickfix List (Trouble)" },
 		{ "<leader>xl", "<cmd>Trouble loclist toggle<CR>", desc = "Location List (Trouble)" },
-		-- { "<leader>xt", "<cmd>TodoTrouble<CR>", desc = "Open todos in trouble" }, (leftover from old Trouble, not sure if this is still useful or even possible)
+		{ "<leader>xs", "<cmd>Trouble symbols toggle focus=false<cr>", desc = "Toggle Symbols (Trouble)" },
+		{
+			"<leader>xL",
+			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+			desc = "LSP Definitions / references / ... (Trouble)",
+		},
+		{ "<leader>xt", "<cmd>Trouble todo toggle<CR>", desc = "Open todos in trouble" },
 	},
 }

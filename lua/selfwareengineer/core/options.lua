@@ -13,6 +13,17 @@ opt.shiftwidth = 4 -- 4 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
+-- undercurl
+vim.cmd([[let &t_Cs = "\e[4:3m"]]) -- undercurl for diagnostics
+vim.cmd([[let &t_Ce = "\e[4:0m"]]) -- reset undercurl
+
+-- enable spell check
+-- opt.spell = true
+-- opt.spelllang = { "en_us" }
+--
+-- show diagnostics messages
+-- vim.diagnostic.config({ virtual_text = true })
+
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
