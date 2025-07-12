@@ -64,13 +64,8 @@ keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank (visual)" })
 keymap.set("n", "<leader>c", '"_c', { desc = "Change without yank (normal)" })
 keymap.set("v", "<leader>c", '"_c', { desc = "Change without yank (visual)" })
 
---:FIX: BROKEN: Use fuzzy finder to quickly jump to another project (via tmux sessionizer)
-keymap.set(
-	"n",
-	"<C-f>",
-	"<cmd>silent !tmux neww ~/.local/scripts/tmux-sessionizer<CR>",
-	{ desc = "Open tmux sessionizer" }
-)
+-- Use fuzzy finder to quickly jump to another project (via tmux sessionizer)
+keymap.set("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
 
 keymap.set("n", "<leader>xe", "<cmd>!chmod +x %<CR>", { desc = "Make current file executable" })
 
