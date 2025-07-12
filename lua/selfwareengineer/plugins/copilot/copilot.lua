@@ -21,7 +21,7 @@ return {
 				},
 			},
 			suggestion = {
-				enabled = false,
+				enabled = true, --:INFO: Turn copilot suggestions on/off
 				auto_trigger = true,
 				hide_during_completion = true,
 				debounce = 75,
