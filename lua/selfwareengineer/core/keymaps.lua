@@ -68,9 +68,14 @@ keymap.set("v", "<leader>c", '"_c', { desc = "Change without yank (visual)" })
 keymap.set("n", "X", "x", { desc = "Delete charecter" })
 keymap.set("n", "x", '"_x', { desc = "Delete charecter without yank" })
 
+-- Documentation shortcuts
+keymap.set({ "n", "v" }, "<leader>rg", "<cmd>h group-name<CR>", { desc = "Read syntax group info" })
+keymap.set({ "n", "v" }, "<leader>rh", "<cmd>checkhealth<CR>", { desc = "Perform and read health check" })
+
 -- Use fuzzy finder to quickly jump to another project (via tmux sessionizer)
 keymap.set("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
 
+-- Make current file executable
 keymap.set("n", "<leader>xe", "<cmd>!chmod +x %<CR>", { desc = "Make current file executable" })
 
 -- Set up boilerplate HTML
