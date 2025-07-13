@@ -63,11 +63,11 @@ return {
 		end
 
 		for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
-			lspconfig[server_name].setup({
+			vim.lsp.config(server_name, {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
+			-- print("LSP server " .. server_name .. " configured")
 		end
-		-- print("lspconfig is running")
 	end,
 }
