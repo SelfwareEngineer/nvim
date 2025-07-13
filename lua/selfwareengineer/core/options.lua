@@ -14,7 +14,7 @@ opt.shiftwidth = 4 -- 4 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.smartindent = true -- smart indenting on new lines
-opt.wrap = false -- don't wrap lines (if your lines are wrapping, they're probably too long)
+opt.wrap = true -- wrap lines at the edge of the window
 
 -- backspace behavior
 opt.backspace = { "indent", "eol", "start" } -- allow backspacing over indent, end of line, and start of insert
