@@ -2,12 +2,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
--- syntax: keymap.set("mode initial", "new key/combo", "default key", { desc = "<description>"})
+-- syntax: keymap.set("<mode_initial>", "<new_key_combo>", "<default_key_combo>", { desc = "<description>"})
 
--- Shortcut to open LazyVim
+-- Plugin manager shortcuts
 keymap.set({ "n", "v" }, "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy menu" })
-
--- Shortcut to open Mason
 keymap.set({ "n", "v" }, "<leader>M", "<cmd>Mason<CR>", { desc = "Open Mason menu" })
 
 -- Primagen's sacriligous ESC remap that I happen to completely agree with
@@ -44,6 +42,10 @@ keymap.set("x", "<leader>p", '"_dp', { desc = "Paste without yank" })
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
+-- Allow multiple indents for visual mode
+keymap.set("v", "<", "<gv", { desc = "Indent left in visual mode" })
+keymap.set("v", ">", ">gv", { desc = "Indent right in visual mode" })
+
 -- Line append without moving cursor
 keymap.set("n", "J", "mzJ`z", { desc = "Append line below without moving cursor" })
 
@@ -63,6 +65,8 @@ keymap.set("n", "<leader>d", '"_d', { desc = "Delete without yank (normal)" })
 keymap.set("v", "<leader>d", '"_d', { desc = "Delete without yank (visual)" })
 keymap.set("n", "<leader>c", '"_c', { desc = "Change without yank (normal)" })
 keymap.set("v", "<leader>c", '"_c', { desc = "Change without yank (visual)" })
+keymap.set("n", "X", "x", { desc = "Delete charecter" })
+keymap.set("n", "x", '"_x', { desc = "Delete charecter without yank" })
 
 -- Use fuzzy finder to quickly jump to another project (via tmux sessionizer)
 keymap.set("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>", { desc = "Open tmux sessionizer" })
