@@ -35,5 +35,12 @@ return {
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss Noice notifications" })
+		vim.keymap.set({ "n", "v" }, "<leader>nl", "<cmd>NoiceLast<CR>", { desc = "Show last Noice message" })
+		vim.keymap.set(
+			{ "n", "v" },
+			"<leader>nt",
+			"<cmd>Noice telescope<CR>",
+			{ desc = "Show Noice history in Telescope" }
+		)
 	end,
 }

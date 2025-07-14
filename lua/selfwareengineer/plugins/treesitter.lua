@@ -52,5 +52,9 @@ return {
 				},
 			},
 		})
+
+		vim.keymap.set("n", "<leader>ti", "<cmd>Inspect<CR>", {
+			desc = "Inspect treesitter node under cursor",
+		})
 	end,
 }
