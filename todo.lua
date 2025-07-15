@@ -1,6 +1,9 @@
 --:FIX:
--- figure out how to decouple plugin-specific settings from the main config;
--- the dev of solarized-osaka has different folders for each plugin, maybe start there
+-- 1. Read this first so you understand how Lazy.nvim works -> https://lazy.folke.io/developers
+-- 2. figure out how to decouple plugin-specific settings from the main config;
+--    the dev of solarized-osaka has different folders for each plugin, maybe start there
+-- 3. Colors can be buggy when applying to plugins such as bufferline.nvim sometimes;
+--    probably a load order issue? Mostly seems to happen after a config change
 --
 --:NOTE: city-lights theme
 -- Investigate nvim-tree git sign colors
