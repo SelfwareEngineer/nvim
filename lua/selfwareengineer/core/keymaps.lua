@@ -69,7 +69,27 @@ keymap.set("n", "X", "x", { desc = "Delete charecter" })
 keymap.set("n", "x", '"_x', { desc = "Delete charecter without yank" })
 
 -- Documentation shortcuts
-keymap.set({ "n", "v" }, "<leader>rg", "<cmd>h group-name<CR>", { desc = "Read syntax group info" })
+-- Highlight groups :NOTE: Plugins are likely to have highlight group documentation under :h <plugin_name>-highlight-groups or similar
+keymap.set({ "n", "v" }, "<leader>rg", "<cmd>h group-name<CR>", { desc = "Read basic syntax highlighting info" })
+keymap.set(
+	{ "n", "v" },
+	"<leader>ra",
+	"<cmd>h highlight-groups<CR>",
+	{ desc = "Read advanced syntax highlighting info" }
+)
+keymap.set(
+	{ "n", "v" },
+	"<leader>rd",
+	"<cmd>h diagnostic-highlights<CR>",
+	{ desc = "Read diagnostic highlight group documentation" }
+)
+keymap.set(
+	{ "n", "v" },
+	"<leader>rt",
+	"<cmd>h treesitter-highlight-groups<CR>",
+	{ desc = "Read treesitter syntax highlighting info" }
+)
+-- Health check
 keymap.set({ "n", "v" }, "<leader>rh", "<cmd>checkhealth<CR>", { desc = "Perform and read health check" })
 
 -- Use fuzzy finder to quickly jump to another project (via tmux sessionizer)

@@ -1,0 +1,11 @@
+--:FIX:
+-- figure out how to decouple plugin-specific settings from the main config;
+-- the dev of solarized-osaka has different folders for each plugin, maybe start there
+--
+--:NOTE: city-lights theme
+-- Investigate nvim-tree git sign colors
+-- Decide on desired color scheme for nvim-tree
+-- Split city-lights monolith into multiple files
+-- extract colors to colors.lua
+-- extract plugin-specific settings to their own files
+-- try making the background change based on filetype
