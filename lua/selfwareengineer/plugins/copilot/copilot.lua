@@ -4,7 +4,8 @@ return {
 	event = "InsertEnter",
 	build = ":Copilot auth",
 	config = function()
-		require("copilot").setup({
+		local copilot = require("copilot")
+		copilot.setup({
 			panel = {
 				enabled = true,
 				auto_refresh = true,
@@ -26,12 +27,12 @@ return {
 				hide_during_completion = true,
 				debounce = 75,
 				keymap = {
-					toggle_auto_trigger = "<M-d>", -- BROKEN -- d for "dismiss," since this is effectively redundant with copilot.suggestion.dismiss()
 					accept = "<M-a>",
 					accept_word = "<M-w>",
 					accept_line = "<M-m>",
 					next = "<M-l>",
 					prev = "<M-h>",
+					dismiss = "<M-d>",
 				},
 			},
 			filetypes = {
@@ -48,6 +49,9 @@ return {
 			},
 			copilot_node_command = "node", -- Node.js version must be > 18.x
 			server_opts_overrides = {},
+		})
+		vim.keymap.set({ "n", "v" }, "<leader>co", "<cmd>Copilot suggestion toggle_auto_trigger<CR>", {
+			desc = "Toggle Copilot Suggestions",
 		})
 	end,
 }
