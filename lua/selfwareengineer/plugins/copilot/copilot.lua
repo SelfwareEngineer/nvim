@@ -5,6 +5,8 @@ return {
 	build = ":Copilot auth",
 	config = function()
 		local copilot = require("copilot")
+		local suggestion = require("copilot.suggestion")
+		local panel = require("copilot.panel")
 		copilot.setup({
 			panel = {
 				enabled = true,
@@ -50,7 +52,7 @@ return {
 			copilot_node_command = "node", -- Node.js version must be > 18.x
 			server_opts_overrides = {},
 		})
-		vim.keymap.set({ "n", "v" }, "<leader>co", "<cmd>Copilot suggestion toggle_auto_trigger<CR>", {
+		vim.keymap.set({ "n", "v" }, "<leader>co", suggestion.toggle_auto_trigger, {
 			desc = "Toggle Copilot Suggestions",
 		})
 	end,
