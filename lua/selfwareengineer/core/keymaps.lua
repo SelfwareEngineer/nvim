@@ -102,7 +102,7 @@ keymap.set("n", "<leader>xe", "<cmd>!chmod +x %<CR>", { desc = "Make current fil
 keymap.set(
 	"n",
 	"<leader>!",
-	'i<!doctype html><CR><html lang="en"><CR><Tab><head><CR><Tab><Tab><meta charset="UTF-8" /><CR><Tab><Tab><meta name="viewport" content="width=device-width, initial-scale=2.0" /><CR><Tab><Tab><link rel="stylesheet" href="style.css" /><CR><Tab><Tab><script src="script.js" defer></script><CR><Tab><Tab><title>Document</title><CR><Tab></head><CR><Tab><body></body><CR></html><ESC>',
+	'i<!doctype html><CR><html lang="en"><CR><head><CR><meta charset="UTF-8" /><CR><meta name="viewport" content="width=device-width, initial-scale=2.0" /><CR><link rel="stylesheet" href="style.css" /><CR><script src="script.js" defer></script><CR><title>Document</title><CR></head><CR><body></body><CR></html><ESC>',
 	{ desc = "set up boilerplate HTML" }
 )
 
