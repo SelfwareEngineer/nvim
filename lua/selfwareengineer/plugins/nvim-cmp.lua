@@ -56,8 +56,20 @@ return {
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
-					maxwidth = 50,
-					ellipsis_char = "...",
+					mode = "symbol", -- show only symbol annotations
+					maxwidth = {
+						-- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+						-- can also be a function to dynamically calculate max width such as
+						-- menu = function() return math.floor(0.45 * vim.o.columns) end,
+						menu = 50, -- leading text (labelDetails)
+						abbr = 50, -- actual suggestion item
+					},
+					ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+					show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+
+					--:WARN: This used to be a whole function, but I couldn't figure out how to get it to work
+					-- with tailwind-tools. See onsails/lspkind.nvim > "Option 2: nvim-cmp" for default config.
+					before = require("tailwind-tools.cmp").lspkind_format,
 				}),
 			},
 		})
