@@ -5,7 +5,7 @@ return {
 		lsp_lines.setup()
 		vim.diagnostic.config({
 			virtual_text = false, -- Disable default virtual text
-			virtual_lines = true, -- Enable virtual lines, which is what lsp_lines uses
+			virtual_lines = false, -- Whether virtual lines are visible on startup
 		})
 		vim.keymap.set("n", "<leader>ll", lsp_lines.toggle, {
 			desc = "Toggle LSP Lines",
