@@ -51,7 +51,9 @@ return {
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
-				{ name = "emmet" }, -- Emmet support for HTML and CSS
+
+				--:WARN: per jackieaskins/cmp-emmet docs, this was supposed to be just "emmet", but that was causing an error to throw on every keystroke in insert mode. Changing to "cmp-emmet" appears to have fixed it.
+				{ name = "cmp-emmet" }, -- Emmet support for HTML and CSS
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
