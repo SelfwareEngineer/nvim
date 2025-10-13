@@ -10,7 +10,7 @@ return {
 		{ "folke/neodev.nvim", opts = {} }, -- improved Lua support in config files
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
+		local lspconfig = vim.lsp.config
 		local mason_lspconfig = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -63,7 +63,7 @@ return {
 		end
 
 		for _, server_name in ipairs(mason_lspconfig.get_installed_servers()) do
-			vim.lsp.config(server_name, {
+			lspconfig(server_name, {
 				capabilities = capabilities,
 				on_attach = on_attach,
 			})
