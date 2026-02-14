@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	event = { "BufReadPre", "BufNewFile" },
+	lazy = false,
 	build = ":TSUpdate",
 	dependencies = {
 		"windwp/nvim-autopairs",
@@ -8,7 +9,7 @@ return {
 	},
 	config = function()
 		-- import nvim-treesitter plugin
-		local treesitter = require("nvim-treesitter.configs")
+		local treesitter = require("nvim-treesitter")
 
 		-- configure treesitter
 		treesitter.setup({ -- enable syntax highlighting
